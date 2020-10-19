@@ -8,6 +8,7 @@ import org.springframework.validation.annotation.Validated;
 
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
@@ -18,6 +19,7 @@ public class SangseungProperties {
 
     @NotEmpty
     String name;
+    @Size(min=0, max=100)
     int age;
     String fullName;
     @DurationUnit(ChronoUnit.SECONDS)
